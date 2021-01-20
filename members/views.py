@@ -8,6 +8,9 @@ def index(request):
     print(dir(req))
     return HttpResponse("<h1>hello</h1>")
 
+def git(req):
+    return HttpResponse("<h2>hello</h2>")
+
 def test(req):
     return HttpResponse("<h2>test</h2>")
 
