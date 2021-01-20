@@ -9,10 +9,20 @@ def index(request):
     return HttpResponse("<h1>hello</h1>")
 
 def git(req):
-    return HttpResponse("<h2>hello</h2>")
+    return HttpResponse("<h2>hello22</h2>")
 
 def test(req):
     return HttpResponse("<h2>test</h2>")
+
+def gu(req):
+    num = req.GET.get('num','')
+    return HttpResponse(f"<h1> gugu : <br> {num_gugu(num)} </h1>")
+
+def num_gugu(num):
+    str = ""
+    for i in range(9):
+        str += f"{int(num)} * {i+1} = {int(num) * (i+1)} <br>"
+    return str
 
 def signup(req):
     if req.method == 'POST':
