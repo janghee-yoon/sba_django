@@ -1,0 +1,13 @@
+<h1>회원등록</h1>
+<img src="http://49.50.172.47:8000/static/a.jpg" />
+<link rel="stylesheet" href="/static/style.css"/>
+
+{{ res }}
+<h1>furniture</h1>
+<form method='post' action='/signup'>	
+{% csrf_token %} 
+	username : <input type="text" name="username" />
+	email : <input type="text" name="email" />
+	<input type="submit" />
+
+</form>
